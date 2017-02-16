@@ -31,10 +31,16 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="{% if current_url() == base_url('ticketac') %} active {% endif %}">
-                    <a href="{{ base_url('ticketac') }}">
+                <li class="{% if current_url() == base_url('ticket/open') %} active {% endif %}">
+                    <a href="{{ base_url('ticket/open') }}">
                         <i class="material-icons">timeline</i>
                         <p>Ticket Aç</p>
+                    </a>
+                </li>
+                <li class="{% if current_url() == base_url('ticket/all') %} active {% endif %}">
+                    <a href="{{ base_url('ticket/all') }}">
+                        <i class="material-icons">timeline</i>
+                        <p>Açık Ticketlar</p>
                     </a>
                 </li>
             </ul>
