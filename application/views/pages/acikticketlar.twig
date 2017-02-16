@@ -1,0 +1,50 @@
+{% extends 'layout.twig' %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-stats">
+                <style>
+                    .card [data-background-color]{
+                        padding:2px;
+                    }
+                </style>
+                <div class="card-header" data-background-color="black">
+                    <img style="width: 70px" src="http://localhost:82/ci_test/public/assets/img/faces/marc.jpg">
+                </div>
+                <div class="card-content">
+                    <p class="category"></p>
+                    <h4 class="card-title">
+                        <a href="{{ base_url('ticketincele') }}/deneme-ticket"> dosyalar burası ne kadar uzun olabilir sence ?</a>
+                    </h4>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">update</i>&nbsp;1 saat önce&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Alperen Uzun tarafından
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card card-stats">
+                <style>
+                    .card [data-background-color]{
+                        padding:2px;
+                    }
+                </style>
+                <div class="card-header" data-background-color="black">
+                    <img style="width: 70px" src="http://localhost:82/ci_test/public/assets/img/faces/marc.jpg">
+                </div>
+                <div class="card-content">
+                    <p class="category"></p>
+                    <h4 class="card-title">Güncellenecek dosyalar burası ne kadar uzun olabilir sence ?</h4>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">update</i>&nbsp;1 saat önce&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Alperen Uzun tarafından
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
