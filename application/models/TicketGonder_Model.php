@@ -13,7 +13,7 @@ class TicketGonder_Model extends CI_Model {
             $this->session->set_flashdata('ticketSuccess',1);
         else
             $this->session->set_flashdata('ticketSuccess',-1);
-        redirect('ticketac');
+        redirect('ticket/open');
 
     }
 }
