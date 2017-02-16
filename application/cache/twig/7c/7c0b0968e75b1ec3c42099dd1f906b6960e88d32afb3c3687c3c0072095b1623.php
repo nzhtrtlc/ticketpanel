@@ -31,28 +31,18 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
     Tip 2: you can also add an image using data-image tag
     Tip 3: you can change the color of the sidebar with data-background-color=\"white | black\"
 -->
-        <div class=\"logo\">
-            <a href=\"http://www.creative-tim.com\" class=\"simple-text\">
-                Creative Tim
-            </a>
-        </div>
-        <div class=\"logo logo-mini\">
-            <a href=\"http://www.creative-tim.com\" class=\"simple-text\">
-                Ct
-            </a>
-        </div>
         <div class=\"sidebar-wrapper ps-container ps-theme-default ps-active-y\">
             <div class=\"user\">
                 <div class=\"photo\">
                     <img src=\"";
-        // line 21
+        // line 11
         echo twig_escape_filter($this->env, base_url("public/assets/img/faces/marc.jpg"), "html", null, true);
         echo "\">
                 </div>
                 <div class=\"info\">
                     <a data-toggle=\"collapse\" href=\"#collapseExample\" class=\"collapsed\">
                         ";
-        // line 25
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute(($context["session"] ?? null), "fullName", array()), "html", null, true);
         echo "
                         <b class=\"caret\"></b>
@@ -61,7 +51,7 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
                         <ul class=\"nav\">
                             <li>
                                 <a href=\"";
-        // line 31
+        // line 21
         echo twig_escape_filter($this->env, base_url("logout"), "html", null, true);
         echo "\">Çıkış</a>
                             </li>
@@ -71,7 +61,7 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
             </div>
             <ul class=\"nav\">
                 <li class=\"";
-        // line 38
+        // line 28
         if ((current_url() == base_url())) {
             echo " active ";
         } elseif ((current_url() == base_url("dashboard"))) {
@@ -79,7 +69,7 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
         }
         echo "\">
                     <a href=\"";
-        // line 39
+        // line 29
         echo twig_escape_filter($this->env, base_url("dashboard"), "html", null, true);
         echo "\">
                         <i class=\"material-icons\">dashboard</i>
@@ -87,23 +77,37 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
                     </a>
                 </li>
                 <li class=\"";
-        // line 44
-        if ((current_url() == base_url("ticketac"))) {
+        // line 34
+        if ((current_url() == base_url("ticket/open"))) {
             echo " active ";
         }
         echo "\">
                     <a href=\"";
-        // line 45
-        echo twig_escape_filter($this->env, base_url("ticketac"), "html", null, true);
+        // line 35
+        echo twig_escape_filter($this->env, base_url("ticket/open"), "html", null, true);
         echo "\">
                         <i class=\"material-icons\">timeline</i>
                         <p>Ticket Aç</p>
                     </a>
                 </li>
+                <li class=\"";
+        // line 40
+        if ((current_url() == base_url("ticket/all"))) {
+            echo " active ";
+        }
+        echo "\">
+                    <a href=\"";
+        // line 41
+        echo twig_escape_filter($this->env, base_url("ticket/all"), "html", null, true);
+        echo "\">
+                        <i class=\"material-icons\">timeline</i>
+                        <p>Açık Ticketlar</p>
+                    </a>
+                </li>
             </ul>
             <div class=\"ps-scrollbar-x-rail\" style=\"left: 0px; bottom: 0px;\"><div class=\"ps-scrollbar-x\" tabindex=\"0\" style=\"left: 0px; width: 0px;\"></div></div><div class=\"ps-scrollbar-y-rail\" style=\"top: 0px; height: 231px; right: 0px;\"><div class=\"ps-scrollbar-y\" tabindex=\"0\" style=\"top: 0px; height: 73px;\"></div></div></div>
         <div class=\"sidebar-background\" style=\"background-image: url(";
-        // line 52
+        // line 48
         echo twig_escape_filter($this->env, base_url("public/assets/img/sidebar-1.jpg"), "html", null, true);
         echo ") \"></div></div>
 ";
@@ -116,7 +120,7 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
 
     public function getDebugInfo()
     {
-        return array (  107 => 52,  97 => 45,  91 => 44,  83 => 39,  75 => 38,  65 => 31,  56 => 25,  49 => 21,  26 => 2,  20 => 1,);
+        return array (  111 => 48,  101 => 41,  95 => 40,  87 => 35,  81 => 34,  73 => 29,  65 => 28,  55 => 21,  46 => 15,  39 => 11,  26 => 2,  20 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -136,16 +140,6 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
     Tip 2: you can also add an image using data-image tag
     Tip 3: you can change the color of the sidebar with data-background-color=\"white | black\"
 -->
-        <div class=\"logo\">
-            <a href=\"http://www.creative-tim.com\" class=\"simple-text\">
-                Creative Tim
-            </a>
-        </div>
-        <div class=\"logo logo-mini\">
-            <a href=\"http://www.creative-tim.com\" class=\"simple-text\">
-                Ct
-            </a>
-        </div>
         <div class=\"sidebar-wrapper ps-container ps-theme-default ps-active-y\">
             <div class=\"user\">
                 <div class=\"photo\">
@@ -172,10 +166,16 @@ class __TwigTemplate_c6b5b5deafd00ac1c1fdf13db13afa23dbbcf97cb52ffcfd25ac4800394
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class=\"{% if current_url() == base_url('ticketac') %} active {% endif %}\">
-                    <a href=\"{{ base_url('ticketac') }}\">
+                <li class=\"{% if current_url() == base_url('ticket/open') %} active {% endif %}\">
+                    <a href=\"{{ base_url('ticket/open') }}\">
                         <i class=\"material-icons\">timeline</i>
                         <p>Ticket Aç</p>
+                    </a>
+                </li>
+                <li class=\"{% if current_url() == base_url('ticket/all') %} active {% endif %}\">
+                    <a href=\"{{ base_url('ticket/all') }}\">
+                        <i class=\"material-icons\">timeline</i>
+                        <p>Açık Ticketlar</p>
                     </a>
                 </li>
             </ul>

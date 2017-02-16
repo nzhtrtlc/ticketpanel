@@ -53,7 +53,7 @@ class __TwigTemplate_a4799c97d8b69c90e0b118d2bd163000c5517948f4dab053c253d3dd6d5
             <div class=\"card\">
                 <form method=\"post\" action=\"";
         // line 19
-        echo twig_escape_filter($this->env, base_url("ticketac/gonder"), "html", null, true);
+        echo twig_escape_filter($this->env, base_url("ticket/create"), "html", null, true);
         echo "\" class=\"form-horizontal\">
                     <div class=\"card-header card-header-text\" data-background-color=\"rose\">
                         <i class=\"material-icons\">loyalty</i>
@@ -173,7 +173,7 @@ class __TwigTemplate_a4799c97d8b69c90e0b118d2bd163000c5517948f4dab053c253d3dd6d5
     <div class=\"row\">
         <div class=\"col-md-12\">
             <div class=\"card\">
-                <form method=\"post\" action=\"{{ base_url('ticketac/gonder') }}\" class=\"form-horizontal\">
+                <form method=\"post\" action=\"{{ base_url('ticket/create') }}\" class=\"form-horizontal\">
                     <div class=\"card-header card-header-text\" data-background-color=\"rose\">
                         <i class=\"material-icons\">loyalty</i>
                     </div>
