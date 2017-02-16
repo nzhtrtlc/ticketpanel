@@ -7,15 +7,11 @@ class Ticket extends CI_Controller {
     {
         parent::__construct();
     }
-    public function index()
-    {
-        
-    }
     public function open(){
         //Open Ticket
         $ticketSuccess = isset($this->session->userdata["ticketSuccess"]) ? $this->session->userdata["ticketSuccess"] : 2;
         $this->twig->addGlobal('ticketSuccess', $ticketSuccess);
-        $this->twig->display('pages/ticketac');
+        $this->twig->display('pages/ticket/open');
     }
     public function create(){
         $args = [
@@ -25,8 +21,8 @@ class Ticket extends CI_Controller {
             "ticket_content" => $this->input->post('ticket_content'),
             "ticket_priority" => $this->input->post('ticket_priority')
         ];
-        $this->load->model('ticketgonder_model');
-        $this->ticketgonder_model->gonder($args);
+        $this->load->model('ticket_model');
+        $this->ticket_model->create($args);
     }
     public function show($ticket_id){
         //Show Ticket
@@ -38,6 +34,6 @@ class Ticket extends CI_Controller {
         //Delete Ticket
     }
     public function all(){
-        $this->twig->display('pages/acikticketlar');
+        $this->twig->display('pages/ticket/all');
     }
 }
